@@ -1,0 +1,21 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML for python flask</title>
+</head>
+
+<body>
+	<form action="/predict" method="post" step="0.00001">
+	​   <p>Volume : <input type="number" value="volume" name="volume" step="0.00001"></p>
+        <p>RSI : <input type="number" value="rsi" name="rsi" step="0.00001"></p>
+        <p>BandWidth : <input type="number" value="bandwidth" name="bandwidth" step="0.00001"></p>
+        <p>Disparity : <input type="number" value="disparity" name="disparity" step="0.00001"></p>
+	    <p><input type="submit" value="제출"/></p>
+        {% if predict %}
+            <span class="result_lable">
+               추천포지션 : {{ predict }} 입니다.
+            </span>
+        {% endif %}
+	</form>
+</body>
+</html>
